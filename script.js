@@ -8,6 +8,26 @@ const bookSection = document.getElementById('bookSection');
 const booksArr = [];
 
 const loader = document.getElementById('loader');
+const profileIcon = document.getElementById('profileIcon');
+document.addEventListener("DOMContentLoaded", () => {
+     const logoutBtn = document.getElementById("logOut");
+ logoutBtn.addEventListener("click", () => {
+        // console.log("hi")
+        localStorage.removeItem("loggedInUser");  
+        window.location.href = "index.html";  
+    });
+});
+let profileStatus = true;
+
+profileIcon.addEventListener("click", () => {
+    if(profileStatus){
+        document.getElementById('profileOption').style.display='block'
+        profileStatus = false;
+    }else{
+     document.getElementById('profileOption').style.display='none'
+     profileStatus = true;
+    }
+});
 
 async function fetchTopBook(da) {
     try {
@@ -62,11 +82,7 @@ async function fetchBooks(da) {
                 main.appendChild(childDiv);
 
                 // Add click event for the quick-view dynamically
-                let quickView = childDiv.querySelector('.book_desc');
-               
-                quickView.addEventListener('click',function()  {
-                    console.log('item');
-                });
+                
             });
 
             container.appendChild(main);
