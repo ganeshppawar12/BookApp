@@ -29,7 +29,41 @@
                     </button>
                 </div>
             </div>
+
+           
             <div class="profile">
+                <div id="toggleBox"
+                style="
+                  position: relative;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  padding: 10px 16px;
+                  gap: 10px;
+                  width: fit-content;
+                  border-radius: 22px;
+                  
+                "
+              >
+                <img src="img/sun.png" loading="lazy" alt="" width="20" />
+                <div id="toggler"
+                  style="
+                  position: absolute;
+    left: 10px;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(255, 255, 255);
+    border: 0.8px solid black;
+    border-radius: 50%;
+    transition: 0.6s ease-in-out;
+
+    
+                  "
+                ></div>
+                <img src="img/moon.png" loading="lazy" alt="" width="20" />
+              </div>
+
+
                 <i  class="fa-regular fa-user"></i>
                 <ul class="profileOption">
                     <li >Profile</li>
@@ -55,7 +89,10 @@
         </div>
             
         </div>
-        <div class="bookSection" id="bookSection"></div>
+        <div class="bookSection" id="bookSection">
+       <h1 class="headingBooks" style="font-size: 3em;">Best Sellers <span style="color: #7f9ed5;">Books</span></h1>
+
+        </div>
     </div>
 
     <script src="script.js"></script>
