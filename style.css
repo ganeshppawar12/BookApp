@@ -72,17 +72,26 @@ nav{
     background: rgb(117, 117, 117);
     color: #c1c0c0;
 }
-
+.profileIcon{
+    position: relative;
+}
 .profileOption{
     position: absolute;
     color: #050505; font-size: 12px; list-style: none;
-    background-color: #fff;
-    /* display: none; */
+    background-color: #e6e6e6;
+    border-radius: 5px;
     top: 10px;
     left: 35px;
+    padding: 5px;
     display: none;
 }
 .profileOption li{
+  border-bottom: 1px solid gray;
+  padding:8px 16px !important;
+  cursor: pointer;
+
+}
+.profileIcon li{
     padding: 5px;
     white-space: nowrap; 
   
@@ -118,7 +127,8 @@ nav{
 }
 .category-container{
     flex: 0.2;
-    padding: 10px;
+    /* width: fit-content; */
+    padding: 10px; 
     /* box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px; */
     transition: 0.5s ease-out;
     height: 85vh;
@@ -131,7 +141,7 @@ nav{
 
 }
 .bookSection{
-    flex: 0.8;
+    flex: 1;
     padding-top: 40px;
 }
 /* width */
@@ -225,6 +235,8 @@ background-color: #edededc2;
 .book-list{
     display: flex;
     gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 .book{
     /* padding: 10px 5px; */
@@ -236,9 +248,9 @@ background-color: #edededc2;
 
 }
 
-.book:hover{
-    background-color: #fafafa;
-}.image-box{
+/* .book:hover{
+    background-color: #fafafa; 
+}*/.image-box{
     position: relative;
     overflow: hidden;
 }
