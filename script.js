@@ -103,32 +103,7 @@ async function fetchBooks(da) {
 fetchTopBook(url2);
 fetchBooks(url);
 
-let toggler = document.getElementById('toggler');
-let toggleBox = document.getElementById('toggleBox');
 
-let flag = localStorage.getItem('darkMode') === 'true';
-
-if (flag) {
-    document.body.classList.add('dark-mode');
-    toggleBox.style.border = '1px solid #000';
-    toggler.style.transform = 'translateX(30px)';
-} else {
-    toggleBox.style.border = '1px solid #fff';
-    toggler.style.transform = 'translateX(0px)';
-}
-
-toggler.addEventListener('click', () => {
-    if (flag) {
-        toggler.style.transform = 'translateX(0px)';
-        document.body.classList.remove('dark-mode');
-    } else {
-        toggler.style.transform = 'translateX(30px)';
-        document.body.classList.add('dark-mode');
-    }
-
-    flag = !flag;
-    localStorage.setItem('darkMode', flag);
-});
 
 
 function ViewMore(data) {
