@@ -63,12 +63,13 @@
                 <img src="img/moon.png" loading="lazy" alt="" width="20" />
               </div>
 
-
+                 <div class="profileIcon" id="profileIcon">
                 <i  class="fa-regular fa-user"></i>
-                <ul class="profileOption">
-                    <li >Profile</li>
-                    <li >Log Out</li>
+                <ul class="profileOption" id="profileOption">
+                    <li  >Profile</li>
+                    <li id="logOut" >Log Out</li>
                 </ul>
+            </div>
             </div>
 
         </div>
@@ -94,7 +95,7 @@
 
         </div>
     </div>
-<script>
+<script  >
 
 let toggler = document.getElementById('toggler');
 let toggleBox = document.getElementById('toggleBox');
@@ -122,6 +123,13 @@ toggler.addEventListener('click', () => {
     flag = !flag;
     localStorage.setItem('darkMode', flag);
 });
+
+
+// let quickView = document.querySelector('.book_desc');
+               
+//                 quickView.addEventListener('click',function()  {
+//                     console.log('item');
+//                 });
 </script>
     <script src="script.js"></script>
 </body>
